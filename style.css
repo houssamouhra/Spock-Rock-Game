@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@font-face {
+  font-family: myfont;
+  src: url(/font/Mario-Kart-DS.ttf);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: wheat;
+  font-family: Lato, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 510px;
+  height: 500px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px -5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#img-play {
+  block-size: 50px;
+  display: flex;
+  padding-right: 90%;
+  position: fixed;
+  top: 10px;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+.header {
+  background: rgb(242, 108, 108);
+  height: 100px;
+  font-family: myfont;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+  margin: 5px;
+}
+
+h1 {
+  color: black;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.player-container {
+  margin: 5px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.fa-regular {
+  font-size: 50px;
+  margin-left: 40px;
+  user-select: none;
+}
+
+#player .fa-regular,
+#player .choice {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+#computer .fa-regular,
+#computer .choice {
+  color: rgb(235, 43, 52);
+}
+
+#player .fa-regular:last-of-type,
+#computer .fa-regular:last-of-type {
+  margin-right: 0;
+}
+
+.selected {
+  color: black !important;
+}
+
+.reset-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 200px;
+  margin-top: 20px;
+  position: relative;
+  right: 50px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 40px;
+  margin: unset;
+  margin-top: 20px;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  #img-play {
+    block-size: 50px;
+    display: flex;
+    padding-right: 90%;
+  }
+
+  .game-container {
+    width: 95%;
+    height: 580px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .player-container {
+    margin: 50px 0 25px 25px;
+  }
+
+  .far {
+    margin-right: 20px;
+  }
+
+  .reset-icon {
+    margin-top: 21px;
+    margin-left: 25px;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  #img-play {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+  .game-container {
+    height: 550px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .player-container {
+    margin: 43px 0 25px 20px;
+  }
+
+  .far {
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 15px;
+  }
+
+  .result-container {
+    margin: 0 20px;
+  }
+}
