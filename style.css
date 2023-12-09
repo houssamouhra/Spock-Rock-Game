@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @font-face {
   font-family: myfont;
-  src: url(/font/Mario-Kart-DS.ttf);
+  src: url(./font/Mario-Kart-DS.ttf);
 }
 
 html {
@@ -45,7 +45,6 @@ body {
   font-family: myfont;
   display: flex;
   border-radius: 5px;
-  justify-content: center;
   align-items: center;
   letter-spacing: 3px;
   margin: 5px;
